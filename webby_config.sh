@@ -28,6 +28,8 @@ production:
 " > config/database.yml
 fi
 
+mkdir log
+
 rake tmp:create RAILS_ENV=production
 rake app:bootstrap RAILS_ENV=production
 
