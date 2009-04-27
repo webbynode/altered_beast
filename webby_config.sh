@@ -1,3 +1,5 @@
+sudo gem install rspec
+
 echo WC_DB_ENGINE=${WC_DB_ENGINE}
  
 if [ "${WC_DB_ENGINE}" == "mysql" ]; then
