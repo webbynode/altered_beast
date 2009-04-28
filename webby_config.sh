@@ -1,4 +1,5 @@
-sudo gem install rspec
+sudo gem install rspec highline ruby-debug RedCloth --no-rdoc --no-ri
+sudo gem install rails --version=2.1.1 --no-rdoc --no-ri
 
 echo WC_DB_ENGINE=${WC_DB_ENGINE}
  
@@ -30,7 +31,9 @@ fi
 
 mkdir log
 
+rake gems:install
+
 rake tmp:create RAILS_ENV=production
-rake app:bootstrap RAILS_ENV=production
+
 
 chown www-data log
