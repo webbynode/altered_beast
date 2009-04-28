@@ -29,11 +29,17 @@ production:
 " > config/database.yml
 fi
 
-mkdir log
-
 rake gems:install
 
 rake tmp:create RAILS_ENV=production
-
+rake app:bootstrap RAILS_ENV=production << EOF
+n
+y
+localhost
+Beast
+admin
+${WC_DB_PASSWORD}
+you@example.com
+EOF
 
 chown www-data log
